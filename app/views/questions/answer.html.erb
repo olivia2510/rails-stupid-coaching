@@ -1,0 +1,13 @@
+<h1>Stupid Coaching</h1>
+<%= params[:question].capitalize %>
+<p><em>-You</em></p>
+<% question = params[:question] %>
+    <% if question.capitalize == 'I am going to work' %>
+    <p> Great! </p>
+<% elsif question.end_with?('?')%>
+    <p> Silly question, get dressed and go to work </p>
+<% else %>
+  <p> I don't care, get dressed and go to work! </p>
+<% end %>
+<p><em>-Your Coach</em></p>
+<%= link_to "Ask a new question", question_path %>
